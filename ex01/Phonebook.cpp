@@ -105,7 +105,7 @@ void	Phonebook::search()
 			print_specific_contact(this->contacts[str[0] - 1 - '0']);
 			break ;
 		}
-		else
+		else if (!std::cin.eof())
 			std::cout << "Invalid index" << std::endl;
 	}
 }
