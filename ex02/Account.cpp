@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "Account.hpp"
-#include <iomanip>
 #include <iostream>
 #include <ctime>
 
@@ -22,10 +21,12 @@ int	Account::_totalNbWithdrawals = 0;
 
 void	Account::_displayTimestamp(void)
 {
-	std::time_t now = std::time(nullptr);
+	char	buffer[20];
+	std::time_t now = std::time(NULL);
 	std::tm *localtime = std::localtime(&now);
 
-	std::cout << std::put_time(localtime, "[%Y%m%d_%H%M%S] ");
+	std::strftime(buffer, sizeof(buffer), "[%Y%m%d_%H%M%S] ", localtime);
+	std::cout << buffer;
 }
 
 Account::Account(int initial_deposit)

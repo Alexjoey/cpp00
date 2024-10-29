@@ -17,7 +17,7 @@ OBJ_DIR	= ./obj
 SRCS	= ./tests.cpp ./Account.cpp
 OBJS	= $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 CC		= c++
-#CFLAGS	= -Wextra -Wall -Werror -std=c++98
+CFLAGS	= -Wextra -Wall -Werror -std=c++98
 INCLUDE	= -I.
 RM		= rm -rf
 
