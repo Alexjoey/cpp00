@@ -1,0 +1,53 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wextra",
+      "-Wall",
+      "-Werror",
+      "-std=c++98",
+      "-Iinc",
+      "-c",
+      "-o",
+      "obj/./main.o",
+      "main.cpp"
+    ],
+    "directory": "/home/amylle/cpp/cpp01/ex01",
+    "file": "/home/amylle/cpp/cpp01/ex01/main.cpp",
+    "output": "/home/amylle/cpp/cpp01/ex01/obj/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wextra",
+      "-Wall",
+      "-Werror",
+      "-std=c++98",
+      "-Iinc",
+      "-c",
+      "-o",
+      "obj/./Phonebook.o",
+      "Phonebook.cpp"
+    ],
+    "directory": "/home/amylle/cpp/cpp01/ex01",
+    "file": "/home/amylle/cpp/cpp01/ex01/Phonebook.cpp",
+    "output": "/home/amylle/cpp/cpp01/ex01/obj/Phonebook.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/c++",
+      "-Wextra",
+      "-Wall",
+      "-Werror",
+      "-std=c++98",
+      "-Iinc",
+      "-c",
+      "-o",
+      "obj/./Contact.o",
+      "Contact.cpp"
+    ],
+    "directory": "/home/amylle/cpp/cpp01/ex01",
+    "file": "/home/amylle/cpp/cpp01/ex01/Contact.cpp",
+    "output": "/home/amylle/cpp/cpp01/ex01/obj/Contact.o"
+  }
+]
