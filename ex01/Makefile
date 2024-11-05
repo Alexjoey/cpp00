@@ -17,7 +17,7 @@ OBJ_DIR	= ./obj
 SRCS	= ./main.cpp ./Phonebook.cpp ./Contact.cpp
 OBJS	= $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 CC		= c++
-CFLAGS	= -Wextra -Wall -Werror -std=c++98
+CFLAGS	= -Wextra -Wall -Werror -std=c++98 -g
 INCLUDE	= -I.
 RM		= rm -rf
 
