@@ -24,12 +24,12 @@ Phonebook::~Phonebook(void)
 
 void	Phonebook::add(void)
 {
-	this->contacts[this->index].add_firstname();
-	this->contacts[this->index].add_lastname();
-	this->contacts[this->index].add_nickname();
-	this->contacts[this->index].add_phonenum();
-	this->contacts[this->index].add_secret();
-	this->index = (this->index + 1) % 8;
+	this->_contacts[this->_index].add_firstname();
+	this->_contacts[this->_index].add_lastname();
+	this->_contacts[this->_index].add_nickname();
+	this->_contacts[this->_index].add_phonenum();
+	this->_contacts[this->_index].add_secret();
+	this->_index = (this->_index + 1) % 8;
 }
 
 static std::string	add_spaces(int	i)
@@ -73,7 +73,8 @@ int	print_contacts(Contact contacts[8])
 		str = max_width(contacts[i].get_lastname(), 10);
 		std::cout << "|" << add_spaces(10 - str.size()) << str;
 		str = max_width(contacts[i].get_nickname(), 10);
-		std::cout << "|" << add_spaces(10 - str.size()) << str << "|" << std::endl;
+		std::cout << "|" << add_spaces(10 - str.size()) << str;
+		std::cout << "|" << std::endl;
 	}
 	std::cout << " ___________________________________________ " << std::endl;
 	return (true);
@@ -92,7 +93,7 @@ void	Phonebook::search()
 {
 	std::string	str;
 
-	if (!print_contacts(this->contacts))
+	if (!print_contacts(this->_contacts))
 		return ;
 	str = "";
 	while (!std::cin.eof())
@@ -100,9 +101,9 @@ void	Phonebook::search()
 		std::cout << "Select an index: ";
 		std::getline(std::cin, str);
 		if (str != "" && str.size() == 1 && str[0] >= '1' && str[0] <= '8' && \
-	  		this->contacts[str[0] - 1 - '0'].get_firstname().size())
+	  		this->_contacts[std::stoi(str) - 1].get_firstname().size())
 		{
-			print_specific_contact(this->contacts[str[0] - 1 - '0']);
+			print_specific_contact(this->_contacts[std::stoi(str) - 1]);
 			break ;
 		}
 		else if (!std::cin.eof())

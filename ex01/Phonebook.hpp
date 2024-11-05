@@ -17,14 +17,17 @@
 
 class Phonebook
 {
-	private:
-		Contact contacts[8];
-		int		index;
-	public:
-		Phonebook(void);
-		~Phonebook(void);
-		void	add(void);
-		void	search(void);
+
+public:
+	Phonebook(void);
+	~Phonebook(void);
+	void	add(void);
+	void	search(void);
+
+private:
+	Contact _contacts[8];
+	int		_index;
+
 };
 
 #endif
