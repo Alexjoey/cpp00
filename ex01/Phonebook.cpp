@@ -101,9 +101,9 @@ void	Phonebook::search()
 		std::cout << "Select an index: ";
 		std::getline(std::cin, str);
 		if (str != "" && str.size() == 1 && str[0] >= '1' && str[0] <= '8' && \
-	  		this->_contacts[std::stoi(str) - 1].get_firstname().size())
+	  		this->_contacts[str[0] - 1 - '0'].get_firstname().size())
 		{
-			print_specific_contact(this->_contacts[std::stoi(str) - 1]);
+			print_specific_contact(this->_contacts[str[0] - 1 - '0']);
 			break ;
 		}
 		else if (!std::cin.eof())
